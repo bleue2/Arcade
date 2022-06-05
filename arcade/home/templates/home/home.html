@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Arcade</title>
+        <style>
+            div {
+                border: 3px;
+            }
+            h1 {
+                text-align: center;
+                color: blue;
+                font-family: "Arial";
+            }
+            button{
+                color: black; 
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .container > div {
+                background-color: springgreen;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+                height: 50px;
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div>
+            <h1>Welcome to the Arcade!</h1>
+        </div>
+        <div class="container">
+            <div id="Snake">
+                <a href="../snake">Snake</a>
+            </div>
+            <div id="Paddle">
+                <a href="../paddle">Paddle</a>
+            </div>
+        </div>
+    </body>
+</html>
