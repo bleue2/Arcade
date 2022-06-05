@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'home',
     'snake',
     'paddle',
+    'tictactoe',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
