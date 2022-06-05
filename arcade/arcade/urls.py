@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('home.urls')),
     path('snake/', include('snake.urls')),
-    path('paddle/', include('paddle.urls'))
+    path('paddle/', include('paddle.urls')),
+    path('ttt/', include('ttt.urls'))
 ]
