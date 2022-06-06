@@ -29,22 +29,44 @@
                 text-align: center;
             }
         </style>
-
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin=""></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin=""></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   
     </head>
     <body>
         <div>
             <h1>Welcome to the Arcade!</h1>
         </div>
-        <div class="container">
-            <div id="snake">
-                <a href="../snake">Snake</a>
-            </div>
-            <div id="paddle">
-                <a href="../paddle">Paddle</a>
-            </div>
-            <div id="tictactoe">
-                <a href="../tictactoe">TicTacToe</a>
-            </div>
+
+        <script type ="text/babel">
+            
+            function Game(props) {
+                let ref = `../${props.game}`
+                return (
+                    <div id={props.game}>
+                        <a href={ref}>{props.game}</a>
+                    </div>
+                );
+            }
+            
+
+            function App() {
+                
+                return (
+                    <div class="container">
+                        <Game game="snake" />
+                        <Game game="paddle" />
+                        <Game game="tictactoe" />
+                    </div>
+                );
+                
+            }
+
+            ReactDOM.render(<App />, document.querySelector("#body"))
+        </script>
+        <div id="body">
+            
         </div>
     </body>
 </html>
