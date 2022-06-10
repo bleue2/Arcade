@@ -3,9 +3,6 @@
     <head>
         <title>Arcade</title>
         <style>
-            div {
-                border: 3px;
-            }
             #head{
                 height: 20%;
                 background-color: red;
@@ -20,7 +17,6 @@
                 flex-wrap: wrap;
                 height: 100%;
             }
-
             .container > div {
                 background-color: springgreen;
                 font-size: 20px;
@@ -51,7 +47,7 @@
                 let ref = `../${props.game}`
                 return (
                     <div id={props.game}>
-                        <a href={ref}>{capitalizeFirstLetter(props.game)}</a>
+                        <a href={ref}>{capitalizeFirstLetter(props.game)} </a>
                     </div>
                 );
             }
