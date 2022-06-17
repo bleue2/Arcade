@@ -4,6 +4,7 @@
         <title>Arcade</title>
         <style>
             #head{
+                margin: 0px;
                 height: 20%;
                 background-color: red;
             }
@@ -17,14 +18,26 @@
                 flex-wrap: wrap;
                 height: 100%;
             }
-            .container > div {
-                background-color: springgreen;
-                font-size: 20px;
-                margin: 20px;
-                padding: 20px;
-                width: 175px;
-                height: 75px;
+            h2 {
+                font-family: Helvetica,Arial,sans-serif;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                color:black;
+                font-size:1.5em;
                 text-align: center;
+                font-weight: bold;
+            }
+            .thumbnail {
+                width: 100%;
+                display: block;
+            }
+            .game-name {
+                display: inline-block;
+                width: 100%;
+            }
+            .game-preview{
+                border-style: solid;
+                width: 222px;
             }
         </style>
         <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin=""></script>
@@ -34,7 +47,7 @@
     </head>
     <body>
         <div id="head">
-            <h1>Welcome to the Arcade!</h1>
+            <h1>Arcade</h1>
         </div>
 
         <script type ="text/babel">
@@ -43,13 +56,22 @@
                 return str.charAt(0).toUpperCase() + str.slice(1);
             }
 
-            function Game(props) {
+            function Game(props){
                 let ref = `../${props.game}`
-                return (
-                    <div id={props.game}>
-                        <a href={ref}>{capitalizeFirstLetter(props.game)} </a>
+                return(
+                    <div class="game-preview">
+                        <a href={ref}>
+                            <div class="thumbnail-row">
+                                <img class="thumbnail" src="snake.jpg"/>
+                            </div>
+                            <div class="game-name">
+                                <h2 class="video-title">
+                                    {capitalizeFirstLetter(props.game)}
+                                </h2>
+                            </div>
+                        </a>
                     </div>
-                );
+                )
             }
             
 
