@@ -2,53 +2,8 @@
 <html lang="en">
     <head>
         <title>Arcade</title>
-        <style>
-            #head{
-                margin: 0px;
-                height: 20%;
-                background-color: red;
-            }
-            h1 {
-                text-align: center;
-                color: blue;
-                font-family: "Arial";
-            }
-            .container {
-                display: flex;
-                column-gap: 30px;
-                row-gap: 30px;
-                flex-wrap: wrap;
-                height: 100%;
-            }
-            h2 {
-                font-family: Helvetica,Arial,sans-serif;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                color:black;
-                font-size:1.5em;
-                text-align: center;
-                font-weight: bold;
-            }
-            .thumbnail {
-                width: 100%;
-                border-top-right-radius: 17px;
-                border-top-left-radius: 17px;
-            }
-            .game-name {
-                display: inline-block;
-                width: 100%;
-            }
-            .game-preview{
-                border-style: solid;
-                width: 222px;
-                border-radius: 20px;
-                cursor: pointer;
-            }
-            .game-preview:hover{
-                box-shadow: 1px 1px;
-                opacity: 0.5;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
+
         <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin=""></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin=""></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -89,9 +44,14 @@
                 
                 return (
                     <div class="container">
-                        <Game game="snake" />
                         <Game game="paddle" />
                         <Game game="tictactoe" />
+                        <Game game = "pacman" />
+                        <Game game = "space invaders" />
+                        <Game game = "asteroids" />
+                        <Game game = "donkey kong" />
+                        <Game game = "snake" />
+                        <Game game = "defender" />
                     </div>
                 );
                 
@@ -99,6 +59,8 @@
 
             ReactDOM.render(<App />, document.querySelector("#body"))
         </script>
-        <div id="body"></div>
+        <div id="body">
+            
+        </div>
     </body>
 </html>
