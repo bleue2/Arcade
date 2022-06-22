@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -67,12 +69,12 @@
 
             function Game(props){
                 let ref = `../${props.game}`
-                let game = `${props.game}.jpg`
+
                 return(
                     <div class="game-preview">
                         <a href={ref}>
                             <div class="thumbnail-row">
-                                <img class="thumbnail" src={game}/>
+                                <img class="thumbnail" src={props.src} alt="none" />
                             </div>
                             <div class="game-name">
                                 <h2 class="video-title">
@@ -89,9 +91,9 @@
                 
                 return (
                     <div class="container">
-                        <Game game="snake" />
-                        <Game game="paddle" />
-                        <Game game="tictactoe" />
+                        <Game game="snake" src="{% static 'home/img/snake.jpg' %}" />
+                        <Game game="paddle" src="{% static 'home/img/paddle.jpg' %}" />
+                        <Game game="tictactoe" src="{% static 'home/img/tictactoe.jpg' %}" />
                     </div>
                 );
                 
