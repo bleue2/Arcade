@@ -33,9 +33,11 @@
             }
             .thumbnail {
                 width: 100%;
-                height: 115px;
+                height: 125px;
                 border-top-right-radius: 17px;
                 border-top-left-radius: 17px;
+                position: absolute;
+                top:0;
             }
             .game-name {
                 display: inline-block;
@@ -43,11 +45,14 @@
                 background-color: yellow;
                 border-bottom-right-radius: 17px;
                 border-bottom-left-radius: 17px;
+                position: absolute;
+                bottom: 0px;
             }
             .game-preview{
+                position: relative;
                 border-style: solid;
                 width: 222px;
-                height: 100%;
+                height: 165px;
                 border-radius: 20px;
                 cursor: pointer;
             }
@@ -99,6 +104,9 @@
                         <Game game="snake" src="{% static 'home/img/snake.jpg' %}" />
                         <Game game="paddle" src="{% static 'home/img/paddle.jpg' %}" />
                         <Game game="tictactoe" src="{% static 'home/img/tictactoe.jpg' %}" />
+                        <Game game ="minesweeper" src="{% static 'home/img/minesweeper.jpg' %}" />
+                        <Game game ="solitaire" src="{% static 'home/img/solitaire.jpg' %}" />
+                        <Game game ="memory" src="{% static 'home/img/memory.jpg' %}" />
                     </div>
                 );
                 
