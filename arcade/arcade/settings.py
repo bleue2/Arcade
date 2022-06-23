@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'minesweeper',
+    'solitaire',
+    'memory',
     'home',
     'snake',
     'paddle',

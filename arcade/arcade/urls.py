@@ -21,5 +21,8 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('snake/', include('snake.urls')),
     path('paddle/', include('paddle.urls')),
-    path('tictactoe/', include('tictactoe.urls'))
+    path('tictactoe/', include('tictactoe.urls')),
+    path('minesweeper/', include('minesweeper.urls')),
+    path('solitaire/', include('solitaire.urls')),
+    path('memory/', include('memory.urls'))
 ]
