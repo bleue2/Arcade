@@ -9,7 +9,10 @@
                 height: 20%;
                 background-color: red;
             }
-            #body{
+            body{
+                background: linear-gradient(to right, #00AAFF, #00FF6C);
+            }
+            #card-body{
                 position: fixed;
                 margin-left: 100px;
             }
@@ -102,15 +105,15 @@
                         <Game game="snake" src="{% static 'home/img/snake.jpg' %}" />
                         <Game game="paddle" src="{% static 'home/img/paddle.jpg' %}" />
                         <Game game="tictactoe" src="{% static 'home/img/tictactoe.jpg' %}" />
-                        <Game game ="minesweeper" src="{% static 'home/img/minesweeper.jpg' %}" />
+                        <Game game ="minesweeper" src="{% static 'home/img/minesweeper.png' %}" />
                         <Game game ="solitaire" src="{% static 'home/img/solitaire.jpg' %}" />
-                        <Game game ="memory" src="{% static 'home/img/memory.jpg' %}" />
+                        <Game game ="memory" src="{% static 'home/img/memory.png' %}" />
                     </div>
                 );
                 
             }
 
-            ReactDOM.render(<App />, document.querySelector("#body"))
+            ReactDOM.render(<App />, document.querySelector("#card-body"))
         </script>
     </head>
     <body>
@@ -118,7 +121,7 @@
             <h1>Arcade</h1>
         </div>
 
-        <div id="body">
+        <div id="card-body">
         </div>
     </body>
 </html>
